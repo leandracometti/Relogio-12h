@@ -1,0 +1,95 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 70%;
+    background-color: #e8e8e8;
+    padding: 5%;
+    font-size: 2.3rem;
+    text-align: center;
+    letter-spacing: 3px;
+    border-bottom: 5px solid blueviolet;
+    border-right: 4px solid purple;
+    box-shadow: 4px 4px 5px -2px #000;
+}
+
+/*classe modo noturno*/
+.modo_noturno {
+    background-color: #111;
+    color: #fff;
+  }
+  
+  .modo_noturno .container {
+    background-color: rgba(232, 232, 232, 0.2039215686);
+    box-shadow: 2px 2px 5px -2px #e8e8e8;
+  }
+
+
+.btn_modo-noturno{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 30%;
+}
+
+.btn_modo-noturno i{
+    font-size: 1.5rem;
+}
+  #checkbox {
+    display: none;
+  }
+  
+  .switch {
+    position: relative;
+    background-color: #777;
+    width: 70px;
+    height: 40px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 2%;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .slider {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  #checkbox:checked ~ .switch {
+    background-color: blueviolet;
+  }
+  
+  #checkbox:checked ~ .switch .slider {
+    transform: translateX(30px);
+  }
+
+
+  /*responsivo*/
+  @media screen and (min-width: 600px){
+    .container{
+        font-size: 3.2rem;
+    }
+  }
+
+  @media screen and (min-width: 950px){
+    .container{
+        width: 50%;
+        font-size: 5rem;
+    }
+
+    .btn_modo-noturno{
+        margin-top: 20%;
+    }
+  }
